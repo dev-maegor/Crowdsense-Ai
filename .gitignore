@@ -1,0 +1,14 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# Historical drafts, exports, and model weights not used by the maintained scripts
+/Basecode.py
+/test.py
+/test2.py
+/CrowdSense Real-Time Crowd Monitoring.pptx
+/CrowdSense_Report.pdf
+/yolov8s.pt

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title description">
+  <title id="title">CrowdSense AI processing pipeline</title>
+  <desc id="description">A camera frame flows through YOLO person detection into a live count, a fading density heatmap, and a recent-count chart.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#263746" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 10 5 0 10Z" fill="#8CA7B8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="430" rx="22" fill="#101D28"/>
+  <rect width="1200" height="430" rx="22" fill="url(#grid)" opacity=".55"/>
+  <text x="54" y="63" fill="#F1F7FA" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700">FROM LIVE VIDEO TO CROWD INSIGHTS</text>
+  <text x="54" y="93" fill="#9BB1BF" font-family="Segoe UI, Arial, sans-serif" font-size="15">On-device frame analysis, visualized as it happens</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="52" y="142" width="226" height="208" rx="15" fill="#172B38" stroke="#3F7584" stroke-width="2"/>
+    <circle cx="82" cy="176" r="15" fill="#2BB3A3"/>
+    <path d="M76 176h12m-6-6v12" stroke="#10242B" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="108" y="182" fill="#A9F0E6" font-size="13" font-weight="700" letter-spacing="1">01 / SOURCE</text>
+    <rect x="76" y="207" width="178" height="92" rx="9" fill="#233C49"/>
+    <path d="M90 276 126 239l27 24 22-19 64 55H90Z" fill="#39796F"/>
+    <circle cx="218" cy="226" r="9" fill="#E8B45B"/>
+    <rect x="147" y="232" width="25" height="51" rx="11" fill="none" stroke="#FF8B69" stroke-width="3"/>
+    <circle cx="159.5" cy="228" r="9" fill="none" stroke="#FF8B69" stroke-width="3"/>
+    <text x="76" y="326" fill="#E2EDF2" font-size="16" font-weight="600">Webcam frame</text>
+    <text x="76" y="345" fill="#9BB1BF" font-size="12">Captured locally</text>
+
+    <path d="M292 245h44" stroke="#8CA7B8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="352" y="142" width="226" height="208" rx="15" fill="#172B38" stroke="#5478A0" stroke-width="2"/>
+    <circle cx="382" cy="176" r="15" fill="#718ED1"/>
+    <path d="M375 179v-5l7-5 7 5v5m-11 0v4m8-4v4" fill="none" stroke="#142235" stroke-width="2" stroke-linecap="round"/>
+    <text x="408" y="182" fill="#C2D2FF" font-size="13" font-weight="700" letter-spacing="1">02 / DETECT</text>
+    <rect x="376" y="207" width="178" height="92" rx="9" fill="#233C49"/>
+    <path d="M390 277 424 240l28 22 22-18 66 55H390Z" fill="#39796F"/>
+    <rect x="455" y="232" width="28" height="54" rx="12" fill="none" stroke="#FF8B69" stroke-width="2.5"/>
+    <path d="M451 228h36v62h-36z" fill="none" stroke="#E9C46A" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="376" y="326" fill="#E2EDF2" font-size="16" font-weight="600">YOLOv8n</text>
+    <text x="376" y="345" fill="#9BB1BF" font-size="12">Person boxes + count</text>
+
+    <path d="M592 245h44" stroke="#8CA7B8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="652" y="142" width="226" height="208" rx="15" fill="#172B38" stroke="#C1774D" stroke-width="2"/>
+    <circle cx="682" cy="176" r="15" fill="#EF946B"/>
+    <path d="M676 180c4-10 8-10 12 0m-10-8h8" fill="none" stroke="#35221D" stroke-width="2" stroke-linecap="round"/>
+    <text x="708" y="182" fill="#FFC4A8" font-size="13" font-weight="700" letter-spacing="1">03 / ACCUMULATE</text>
+    <rect x="676" y="207" width="178" height="92" rx="9" fill="#233C49"/>
+    <circle cx="727" cy="252" r="24" fill="#E45745" opacity=".45"/>
+    <circle cx="727" cy="252" r="15" fill="#F6AE4A" opacity=".72"/>
+    <circle cx="727" cy="252" r="7" fill="#F8E66C"/>
+    <circle cx="791" cy="265" r="18" fill="#E45745" opacity=".42"/>
+    <circle cx="791" cy="265" r="9" fill="#F6AE4A" opacity=".72"/>
+    <circle cx="791" cy="265" r="4" fill="#F8E66C"/>
+    <text x="676" y="326" fill="#E2EDF2" font-size="16" font-weight="600">Fading heatmap</text>
+    <text x="676" y="345" fill="#9BB1BF" font-size="12">Blurred density over time</text>
+
+    <path d="M892 245h44" stroke="#8CA7B8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="952" y="142" width="196" height="208" rx="15" fill="#172B38" stroke="#B69A50" stroke-width="2"/>
+    <circle cx="982" cy="176" r="15" fill="#E8C768"/>
+    <path d="M975 181v-8m7 8v-14m7 14v-10" stroke="#392F16" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="1008" y="182" fill="#F7E5A4" font-size="13" font-weight="700" letter-spacing="1">04 / REVIEW</text>
+    <rect x="976" y="207" width="148" height="92" rx="9" fill="#233C49"/>
+    <path d="M991 280h119M991 224v56" fill="none" stroke="#557180" stroke-width="1"/>
+    <path d="m997 267 20-17 18 7 17-22 18 11 18-13 17 5" fill="none" stroke="#56D3B4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="1088" cy="233" r="4" fill="#F8E66C"/>
+    <text x="976" y="326" fill="#E2EDF2" font-size="16" font-weight="600">Live analytics</text>
+    <text x="976" y="345" fill="#9BB1BF" font-size="12">Recent person counts</text>
+  </g>
+  <text x="54" y="397" fill="#6F8998" font-family="Segoe UI, Arial, sans-serif" font-size="12">CrowdSense AI  /  OpenCV + Ultralytics</text>
+  <circle cx="1122" cy="394" r="5" fill="#2BB3A3"/>
+  <text x="1136" y="399" fill="#9BB1BF" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="end">LOCAL</text>
+</svg>
