@@ -6,6 +6,7 @@
     <img alt="Ultralytics YOLOv8" src="https://img.shields.io/badge/Detection-YOLOv8-65C3BA">
     <img alt="OpenCV" src="https://img.shields.io/badge/Video-OpenCV-5C3EE8?logo=opencv&logoColor=white">
     <img alt="Platform" src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-263238">
+    <img alt="MIT License" src="https://img.shields.io/badge/License-MIT-2E8B57">
   </p>
 </div>
 
@@ -59,6 +60,7 @@ CrowdSense-Ai/
 |-- Trained.py
 |-- requirements.txt
 |-- yolov8n.pt
+|-- LICENSE
 `-- README.md
 ```
 
@@ -77,4 +79,4 @@ This is a computer-vision demonstration, not an identity-recognition system or a
 
 ## License
 
-No project license is included yet. Add a `LICENSE` file before granting permissions for others to reuse or redistribute this project. Ultralytics and model-weight terms may also apply; review their terms for your use case.
+This project is licensed under the MIT License; see [`LICENSE`](LICENSE) for the full text. The license applies to this project's original materials, not third-party software or model weights. Ultralytics and model-weight terms may differ; review them before redistribution or commercial use.
